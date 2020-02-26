@@ -25,19 +25,16 @@ public class Amazondropdownforloopoo {
 	
 	for(int i=0; i<items.size(); i++)
 	{
-		System.out.println(items.get(i).getText());
+		if(items.get(i).getText().equals("Books"))
+				{
+			i=items.size();
+				}
+	
+	else if(i==(items.size()-1))
+	{
+		System.out.println("value not found");
 	}	
 	
-	if(items=="Books")
-	{
-		System.out.println("Pass");
-	}
-	else
-	{
-		System.out.println("Fail");
-		
-	}
-
 }
+	}
 }
-

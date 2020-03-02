@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SelectDateCalendar {
 	
-	public void Date(WebDriver driver, String specificdate) {
+	static public void Date(WebDriver driver, String specificdate) {
 		driver.findElement(By.name("txtJourneyDate")).click();
 		List<WebElement> rows=driver.findElements(By.xpath("(.//table[@class='ui-datepicker-calendar'])[1]/tbody/tr"));
 		System.out.println(rows.size());
@@ -36,8 +36,8 @@ public class SelectDateCalendar {
 		driver.manage().window().maximize();
 		Thread.sleep(3000);
 		driver.get("https://www.apsrtconline.in/oprs-web/");
-		SelectDateCalendar dt=new SelectDateCalendar();
-		dt.Date(driver, "28");
+		//SelectDateCalendar dt=new SelectDateCalendar();
+		SelectDateCalendar.Date(driver, "28");
 		
 		
 	}

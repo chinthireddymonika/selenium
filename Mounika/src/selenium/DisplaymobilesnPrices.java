@@ -13,13 +13,12 @@ public class DisplaymobilesnPrices {
 		
 	WebDriver driver=new ChromeDriver();
 	driver.manage().window().maximize();
-	driver.get("https://flipkart.com/search");
-	Thread.sleep(3000);
-	//driver.findElement(By.className("_2AkmmA _29YdH8")).click();
+	driver.get("https://www.flipkart.com/search?q=Mobiles&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off");
+	Thread.sleep(5000);
 	
-	driver.findElement(By.className("LM6RPg")).sendKeys("MOBILES");
-	driver.findElement(By.className("vh79eN")).click();
-	List<WebElement> mobiles=driver.findElements(By.xpath(".//*[@class='_3wU53n']"));
+	//driver.findElement(By.className("LM6RPg")).sendKeys("MOBILES");
+	//driver.findElement(By.className("vh79eN")).click();
+	List<WebElement> mobiles=driver.findElements(By.className("_3wU53n"));
 	List<WebElement> prices=driver.findElements(By.xpath(".//*[@class='_1vC4OE _2rQ-NK']"));
 	
 	System.out.println("Total mobiles are "+mobiles.size());
